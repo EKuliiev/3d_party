@@ -1,0 +1,13 @@
+diff --git a/boost/boost_1_66_0/tools/build/src/tools/qcc.jam b/boost/boost_1_66_0/tools/build/src/tools/qcc.jam
+index 9e0acc5..b44f421 100644
+--- a/boost/boost_1_65_1/tools/build/src/tools/qcc.jam
++++ b/boost/boost_1_65_1/tools/build/src/tools/qcc.jam
+@@ -219,7 +219,7 @@ if [ os.name ] = NT
+ actions piecemeal archive
+ {
+     $(RM) "$(<)"
+-    "$(CONFIG_COMMAND)" -A "$(<)" "$(>)"
++    "$(CONFIG_COMMAND)" -Vgcc_ntoaarch64le -A "$(<)" "$(>)"
+ }
+ 
+ 
